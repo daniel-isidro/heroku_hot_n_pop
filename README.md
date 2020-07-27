@@ -1,1 +1,1 @@
-# heroku_hot_n_pop
+Repository for Heroku deployment of Hot'n'Pop streamlit web app.
