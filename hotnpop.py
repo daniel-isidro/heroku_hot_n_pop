@@ -25,10 +25,10 @@ X = pd.json_normalize(audio_features[0])
 X_clean = X.drop(['type', 'id', 'uri', 'track_href', 'analysis_url'], axis=1)
 
 if (model.predict(X_clean)[0])==0:
-    st.write('**NOT HOT** :cry: Probability of failure:', int((model.predict_proba(X_clean)[0][0])*100), '%')
+    st.write('**NOT HOT** :cry: Probability', int((model.predict_proba(X_clean)[0][0])*100), '%')
 else:
     #st.balloons()
-    st.write('**HOT!!!** :smile: Probability of success:', int((model.predict_proba(X_clean)[0][1])*100), '%')
+    st.write('**HOT!!!** :smile: Probability', int((model.predict_proba(X_clean)[0][1])*100), '%')
 
 track = sp.track( X['id'][0] )
 st.write('Artist: ', pd.json_normalize(track)['artists'][0][0]['name'])
