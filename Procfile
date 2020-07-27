@@ -1,1 +1,1 @@
-web:sh setup.sh && streamlit run hotnpop.py
+web: sh setup.sh && streamlit run hotnpop.py
