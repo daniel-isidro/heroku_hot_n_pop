@@ -8,6 +8,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 st.title('''Hot'n'Pop Song Machine''')
+
 model = pickle.load(open("model.pkl","rb"))
 
 with open('settings.env') as f:
@@ -21,7 +22,7 @@ query = st.text_input('Enter song name or artist + song name', 'Never Gonna Give
 
 audio_features = sp.audio_features((sp.search(q = query, type='track', market='US'))['tracks']['items'][0]['id'])
 X = pd.json_normalize(audio_features[0])
-X_clean = X.drop(['type', 'id', 'uri', 'track_href', 'analysis_url'], axis=1)
+X_clean = X.drop(['energy', 'type', 'id', 'uri', 'track_href', 'analysis_url'], axis=1)
 
 if (model.predict(X_clean)[0])==0:
     st.write('**NOT HOT** :cry: Probability', int((model.predict_proba(X_clean)[0][0])*100), '%')
