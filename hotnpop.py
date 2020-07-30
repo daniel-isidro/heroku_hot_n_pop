@@ -18,17 +18,20 @@ os.environ['SPOTIPY_CLIENT_SECRET'] = env_vars['SPOTIPY_CLIENT_SECRET']
 
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
-query = st.text_input('Enter song name or artist + song name', 'Never Gonna Give You Up')
+query = st.text_input('Enter song name or artist + song name', 'Rick Astley Never Gonna Give You Up')
+
+if query == '':
+  query = 'Rick Astley Never Gonna Give You Up'
 
 audio_features = sp.audio_features((sp.search(q = query, type='track', market='US'))['tracks']['items'][0]['id'])
 X = pd.json_normalize(audio_features[0])
 X_clean = X.drop(['energy', 'type', 'id', 'uri', 'track_href', 'analysis_url'], axis=1)
 
 if (model.predict(X_clean)[0])==0:
-    st.write('**NOT HOT** :cry: Probability', int((model.predict_proba(X_clean)[0][0])*100), '%')
+    st.write('If released today, it would be **NOT HOT** :cry: Probability', int((model.predict_proba(X_clean)[0][0])*100), '%')
 else:
     st.balloons()
-    st.write('**HOT!!!** :smile: Probability', int((model.predict_proba(X_clean)[0][1])*100), '%')
+    st.write('If released today, it would be **HOT!!!** :smile: Probability', int((model.predict_proba(X_clean)[0][1])*100), '%')
 
 track = sp.track( X['id'][0] )
 st.write('Artist: ', pd.json_normalize(track)['artists'][0][0]['name'])
@@ -36,5 +39,4 @@ st.write('Song:   ', pd.json_normalize(track)['name'][0])
 st.write('Album:  ', pd.json_normalize(track)['album.name'][0])
 st.write('Year:   ', pd.json_normalize(track)['album.release_date'][0][0:4])
 st.audio(pd.json_normalize(track)['preview_url'][0])
-st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None, format='JPEG')
-
+st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None)
