@@ -7,7 +7,7 @@ import os
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-st.title('''Hot'n'Pop Song Machine''')
+st.image('hnp_logo.jpeg', use_column_width=True, width=None, format='JPEG')
 
 model = pickle.load(open("model.pkl","rb"))
 
