@@ -27,7 +27,7 @@ X_clean = X.drop(['energy', 'type', 'id', 'uri', 'track_href', 'analysis_url'], 
 if (model.predict(X_clean)[0])==0:
     st.write('**NOT HOT** :cry: Probability', int((model.predict_proba(X_clean)[0][0])*100), '%')
 else:
-    #st.balloons()
+    st.balloons()
     st.write('**HOT!!!** :smile: Probability', int((model.predict_proba(X_clean)[0][1])*100), '%')
 
 track = sp.track( X['id'][0] )
@@ -35,5 +35,5 @@ st.write('Artist: ', pd.json_normalize(track)['artists'][0][0]['name'])
 st.write('Song:   ', pd.json_normalize(track)['name'][0])
 st.write('Album:  ', pd.json_normalize(track)['album.name'][0])
 st.write('Year:   ', pd.json_normalize(track)['album.release_date'][0][0:4])
-st.image(pd.json_normalize(track)['album.images'][0][1]['url'])
+st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None, format='JPEG')
 st.audio(pd.json_normalize(track)['preview_url'][0])
