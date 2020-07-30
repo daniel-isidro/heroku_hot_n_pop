@@ -35,5 +35,6 @@ st.write('Artist: ', pd.json_normalize(track)['artists'][0][0]['name'])
 st.write('Song:   ', pd.json_normalize(track)['name'][0])
 st.write('Album:  ', pd.json_normalize(track)['album.name'][0])
 st.write('Year:   ', pd.json_normalize(track)['album.release_date'][0][0:4])
-st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None, format='JPEG')
 st.audio(pd.json_normalize(track)['preview_url'][0])
+st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None, format='JPEG')
+
