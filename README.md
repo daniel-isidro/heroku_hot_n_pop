@@ -50,7 +50,7 @@ Note: Postgres must be properly installed in order for this step to work properl
 
 3. **setup.sh**
 
-With this file a streamlit folder with a config.toml file is created.
+With this file a Streamlit folder with a config.toml file is created.
 
 4. **Procfile**
 
