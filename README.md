@@ -25,3 +25,15 @@ $ streamlit hello
 ```
 
 4. That’s it! In the next few seconds the sample app will open in a new tab in your default browser.
+
+## Heroku deployment
+
+Heroku is a platform as a service (PaaS) which can be used to run applications fully in the cloud. To deploy the app you will first need to create a free account on Heroku at https://signup.heroku.com/dc. You can use a Github repository as a file source on Heroku. In our case, for the web app to be deployed automagically, we need to have these files in that repository:
+
+* hotnpop.py
+* requirements.txt
+* setup.sh
+* Procfile
+* model.pkl
+* settings.env
+* hnp_logo.jpg
