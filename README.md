@@ -15,11 +15,13 @@ For installing Streamlit, according to the source documentation:
 1. Make sure that you have Python 3.6 or greater installed.
 
 2. Install Streamlit using PIP:
-```$ pip install streamlit
+```
+$ pip install streamlit
 ```
 
 3. Run the hello world app:
-```$ streamlit hello
+```
+$ streamlit hello
 ```
 
 4. That’s it! In the next few seconds the sample app will open in a new tab in your default browser.
