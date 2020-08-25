@@ -10,7 +10,7 @@ You can play with a live demo of the web app [here](https://hot-n-pop-song-machi
 
 ### Streamlit
 
-Streamlit’s open-source app framework is an easy way to create web apps, all in Python, for free. You can find more info at https://www.streamlit.io
+Streamlit’s open-source app framework is an easy way to create web apps, all in Python, for free. You can find more info at https://www.streamlit.io.
 
 For installing Streamlit, according to the source documentation:
 
