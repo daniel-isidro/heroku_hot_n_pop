@@ -26,7 +26,7 @@ $ pip install streamlit
 $ streamlit hello
 ```
 
-4. That’s it! In the next few seconds the sample app will open in a new tab in your default browser.
+4. Done. In the next few seconds the sample app will open in a new tab in your default browser.
 
 ### Heroku deployment
 
@@ -67,3 +67,7 @@ Text file containing user tokens for the Spotify Web API.
 7. **hnp_logo.jpg**
 
 Top image in the web page.
+
+Heroku will create a free subdomain for your web app, like http://webapp.herokuapp.com, but you can also specify a custom domain in the Heroku Dashboard.
+
+That's it! You can play with a live demo of the Hot'n'Pop Song Machine web app [here](https://hot-n-pop-song-machine.herokuapp.com).
