@@ -4,7 +4,7 @@ Repository for the front end web app of the **Hot'n'Pop Song Machine** project, 
 
 The Github repository of the full **Hot'n'Pop Song Machine** project can be found at https://github.com/daniel-isidro/hot_n_pop_song_machine.
 
-You can play with a live demo of the web app [here](https://hot-n-pop-song-machine.herokuapp.com).
+You can play with a live demo of the web app **[here](https://hot-n-pop-song-machine.herokuapp.com)**.
 
 # Installation
 
@@ -70,4 +70,4 @@ Top image on the web page.
 
 Heroku will create a free subdomain for your web app, like http://webapp.herokuapp.com, but you can also specify a custom domain in the Heroku Dashboard.
 
-That's it! Remember you can play with a live demo of the **Hot'n'Pop Song Machine** web app [here](https://hot-n-pop-song-machine.herokuapp.com).
+That's it! Remember you can play with a live demo of the **Hot'n'Pop Song Machine** web app **[here](https://hot-n-pop-song-machine.herokuapp.com)**.
