@@ -2,7 +2,7 @@
 
 Repository for the front end web app of the **Hot'n'Pop Song Machine** project, a Machine Learning song popularity predictor, that uses the Streamlit app framework and web hosting on Heroku.
 
-The Github repository of the full **Hot'n'Pop Song Machine** project can be found at https://github.com/daniel-isidro/hot_n_pop_song_machine.
+The Github repository of the full **Hot'n'Pop Song Machine** project can be found **[here](https://github.com/daniel-isidro/hot_n_pop_song_machine)**.
 
 You can play with a live demo of the web app **[here](https://hot-n-pop-song-machine.herokuapp.com)**.
 
@@ -12,7 +12,7 @@ You can play with a live demo of the web app **[here](https://hot-n-pop-song-mac
 
 Streamlit’s open-source app framework is an easy way to create web apps, all in Python, for free. You can find more info at https://www.streamlit.io.
 
-For installing Streamlit, according to the source documentation:
+For **installing Streamlit**, according to the source documentation:
 
 1. Make sure that you have Python 3.6 or greater installed.
 
@@ -30,9 +30,9 @@ $ streamlit hello
 
 ### Heroku deployment
 
-Heroku is a platform as a service (PaaS) which can be used to run applications fully in the cloud. To deploy the app you will first need to create a free account on [Heroku](https://signup.heroku.com/dc).
+Heroku is a platform as a service (PaaS) which can be used to run applications fully in the cloud. To deploy your app you will first need to create a **free account** on [Heroku](https://signup.heroku.com/dc).
 
-After signing up, in the Heroku Dashboard, you can use a Github repository as a deployment method on Heroku. You have to connect your Heroku app to the Github repository of your choice, and then turn on 'Automatic deploys'. That way every time a file is updated on the Github repository, a redeployment to Heroku with those changes is automagically triggered.
+After signing up, in the **Heroku Dashboard**, you can use a Github repository as a **deployment method** on Heroku. You have to connect your Heroku app to the Github repository of your choice, and then turn on **'Automatic deploys'**. That way every time a file is updated on the Github repository, a redeployment to Heroku with those changes is automagically triggered.
 
 You will need to have these files in the Github repository:
 
@@ -62,7 +62,7 @@ The pickled ML model.
 
 6. **settings.env**
 
-Text file containing user tokens for the Spotify Web API.
+Text file containing the Client User and Client ID keys for the Spotify Web API.
 
 7. **hnp_logo.jpg**
 
