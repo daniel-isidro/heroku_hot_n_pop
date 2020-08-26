@@ -66,7 +66,7 @@ Text file containing user tokens for the Spotify Web API.
 
 7. **hnp_logo.jpg**
 
-Top image in the web page.
+Top image on the web page.
 
 Heroku will create a free subdomain for your web app, like http://webapp.herokuapp.com, but you can also specify a custom domain in the Heroku Dashboard.
 
