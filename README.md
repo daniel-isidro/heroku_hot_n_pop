@@ -2,7 +2,7 @@
 
 Repository for the front end web app of the **Hot'n'Pop Song Machine** project, a Machine Learning song popularity predictor, that uses the Streamlit app framework and web hosting on Heroku.
 
-The complete Github repository of the project can be found at https://github.com/daniel-isidro/hot_n_pop_song_machine.
+The Github repository of the full **Hot'n'Pop Song Machine** project can be found at https://github.com/daniel-isidro/hot_n_pop_song_machine.
 
 You can play with a live demo of the web app [here](https://hot-n-pop-song-machine.herokuapp.com).
 
