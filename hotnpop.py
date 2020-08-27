@@ -30,8 +30,8 @@ st.image('hnp_logo.jpeg', use_column_width=True, width=None, format='JPEG')
 
 #with open('settings.env') as f:
 #    env_vars = json.loads(f.read())
-os.environ['SPOTIPY_CLIENT_ID'] = env_vars['SPOTIPY_CLIENT_ID']
-os.environ['SPOTIPY_CLIENT_SECRET'] = env_vars['SPOTIPY_CLIENT_SECRET']
+os.environ['SPOTIPY_CLIENT_ID'] = SPOTIPY_CLIENT_ID
+os.environ['SPOTIPY_CLIENT_SECRET'] = SPOTIPY_CLIENT_SECRET
 
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
