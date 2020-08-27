@@ -28,8 +28,8 @@ def get_prediction():
 
 st.image('hnp_logo.jpeg', use_column_width=True, width=None, format='JPEG')
 
-with open('settings.env') as f:
-    env_vars = json.loads(f.read())
+#with open('settings.env') as f:
+#    env_vars = json.loads(f.read())
 os.environ['SPOTIPY_CLIENT_ID'] = env_vars['SPOTIPY_CLIENT_ID']
 os.environ['SPOTIPY_CLIENT_SECRET'] = env_vars['SPOTIPY_CLIENT_SECRET']
 
