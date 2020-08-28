@@ -18,7 +18,7 @@ For **installing Streamlit**, according to the source documentation:
 
 2. Install Streamlit using PIP:
 ```
-$ pip install streamlit
+$ pip install -q streamlit==0.65.2
 ```
 
 3. Run the hello world app:
