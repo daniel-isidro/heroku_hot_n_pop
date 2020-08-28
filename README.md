@@ -60,13 +60,17 @@ A text file in the root directory of your application, to explicitly declare wha
 
 The pickled ML model.
 
-6. **settings.env**
-
-Text file containing the Client User and Client ID keys for the Spotify Web API.
-
-7. **hnp_logo.jpg**
+6. **hnp_logo.jpg**
 
 Top image on the web page.
+
+### Config Vars
+
+In order to use your secret Spotify web API credentials in the web app, you will have to set up two config vars, **SPOTIPY_CLIENT_ID** and **SPOTIPY_CLIENT_SECRET**, in the Settings area of the Heroku Dashboard. They will act as Python environment vars. Please enter keys and values without quotes.
+
+![Config Vars](https://github.com/daniel-isidro/heroku_hot_n_pop/blob/master/config_vars.png)
+
+### URL
 
 Heroku will create a free subdomain for your web app, like http://webapp.herokuapp.com, but you can also specify a custom domain in the Heroku Dashboard.
 
