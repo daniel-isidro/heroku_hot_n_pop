@@ -7,8 +7,8 @@ import os
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-def get_prediction():
-    audio_features = sp.audio_features(results['tracks']['items'][0]['id'])
+def get_prediction(items):
+    audio_features = sp.audio_features(items[0]['id'])
     X = pd.json_normalize(audio_features[0])
     X_clean = X.drop(['type', 'id', 'uri', 'track_href', 'analysis_url'], axis=1)
     if (model.predict(X_clean)[0])==0:
@@ -30,17 +30,14 @@ st.image('hnp_logo.jpeg', use_column_width=True, width=None, format='JPEG')
 
 SPOTIPY_CLIENT_ID = os.environ['SPOTIPY_CLIENT_ID']
 SPOTIPY_CLIENT_SECRET = os.environ['SPOTIPY_CLIENT_SECRET']
-
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
 model = pickle.load(open("model.pkl","rb"))
 
 query = st.text_input('Please enter song name or artist + song name', value='')
-
 if query != '':
-    results = sp.search(q = query, type='track', market='US')
-
-    if not results["tracks"]["items"]:
+    results = sp.search(q = query, type='track', market='US')["tracks"]["items"]
+    if not results:
         st.warning('No results found. Please try again')
     else:
-        get_prediction()
+        get_prediction(results)

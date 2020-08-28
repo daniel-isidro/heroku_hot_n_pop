@@ -64,13 +64,15 @@ The pickled ML model.
 
 Top image on the web page.
 
-### Config Vars
+**Config Vars**
 
-In order to use your secret Spotify web API credentials in the web app, you will have to set up two config vars, **SPOTIPY_CLIENT_ID** and **SPOTIPY_CLIENT_SECRET**, in the Settings area of the Heroku Dashboard. They will act as Python environment vars. Please enter keys and values without quotes.
+In order to use your secret Spotify web API credentials in the web app, you will have to set up two config vars, **SPOTIPY_CLIENT_ID** and **SPOTIPY_CLIENT_SECRET**, in the Settings area of the Heroku Dashboard.
 
 ![Config Vars](https://github.com/daniel-isidro/heroku_hot_n_pop/blob/master/config_vars.png)
 
-### URL
+They will act as Python environment vars. Please enter keys and values without quotes.
+
+***URL***
 
 Heroku will create a free subdomain for your web app, like http://webapp.herokuapp.com, but you can also specify a custom domain in the Heroku Dashboard.
 
