@@ -26,7 +26,7 @@ def get_prediction(items):
         st.audio(preview)
     st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None)
 
-st.image('hnp_logo.jpeg', use_column_width=True, width=None, format='JPEG')
+st.image('hnp_logo.jpeg', use_column_width=True, width=None, output_format='auto')
 
 SPOTIPY_CLIENT_ID = os.environ['SPOTIPY_CLIENT_ID']
 SPOTIPY_CLIENT_SECRET = os.environ['SPOTIPY_CLIENT_SECRET']
