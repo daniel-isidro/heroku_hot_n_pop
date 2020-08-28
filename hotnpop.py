@@ -26,7 +26,7 @@ def get_prediction():
         st.audio(preview)
     st.image(pd.json_normalize(track)['album.images'][0][0]['url'], use_column_width=True, width=None)
 
-st.image('hnp_logo.jpeg', use_column_width=True, width=None, format='JPEG')
+st.image('hnp_logo.jpeg', use_column_width=True, width=None, output_format='JPEG')
 
 with open('settings.env') as f:
     env_vars = json.loads(f.read())
