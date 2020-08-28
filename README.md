@@ -72,7 +72,7 @@ In order to use your secret Spotify web API credentials in the web app, you will
 
 They will act as Python environment vars. Please enter keys and values without quotes.
 
-***URL***
+**URL**
 
 Heroku will create a free subdomain for your web app, like http://webapp.herokuapp.com, but you can also specify a custom domain in the Heroku Dashboard.
 
